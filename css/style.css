@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap');
+:root {
+    --tamnoPlava: #1d527c;  /* rgb(29, 82, 124) */
+    --svetloPlava: #459ad3; /* rgb(69, 154, 211) */
+    --orange: #fd7f45;      /* rgb(253, 127, 69) */
+    --tamnoSiva: #3c3b3c;
+    --svetloSiva: lightgray;
+    --bela: #fff;
+    --transition: .4s ease;
+    --padding: 100px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--tamnoSiva);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.headings {
+    font-size: 3rem;
+}
+
+.headings::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: var(--svetloPlava);
+    margin: 20px 0;
+}
+
+/**************
+Navigation
+**************/
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right,rgb(253, 127, 69),rgb(29, 82, 124));
+    padding: 5px 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav .logo {
+    color: var(--bela);
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul li a {
+    color: var(--bela);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 60px;
+}
+
+nav ul li a:hover,
+nav .logo:hover {
+    color: var(--svetloSiva);
+    transition: var(--transition);
+}
+
+/**************
+Header
+**************/
+
+header {
+    background-image:linear-gradient(rgba(29, 82, 124,.8),rgba(253, 127, 69,.8)),url(../img/baloon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--bela);
+}
+
+header h1 {
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+header h1 span {
+    font-style: italic;
+    font-weight: 400;
+}
+
+header p {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.2rem;
+}
+
+header button {
+    background-color: transparent;
+    border: 1px solid var(--bela);
+    color: var(--bela);
+}
+
+header button:hover {
+    background-color: var(--bela);
+    color: var(--tamnoSiva);
+    
+}
+
+/**************
+About
+**************/
+
+.about {
+    padding: var(--padding);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .col {
+    flex: 1;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about .col:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about p {
+    padding-right: 80px;
+}
+
+.about .headings {
+    color: var(--tamnoPlava);
+}
+
+/**************
+Services
+**************/
+
+.services {
+    padding: var(--padding);
+    background-image:linear-gradient(rgba(29, 82, 124,.9),rgba(69, 154, 211,.9)),url(../img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.services .container {
+    display: flex;
+}
+
+.services .col {
+    flex: 1;
+}
+
+.services .col:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.services i {
+    color: var(--orange);
+    font-size: 5rem;
+    flex: 1 1 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.services .headings {
+    color: var(--bela);
+}
+
+.services .headings::after {
+    background-color: var(--orange);
+}
+
+.services p {
+    color: var(--bela);
+    padding: 30px 0;
+}
+
+/**************
+Blog
+**************/
+
+.blog {
+    padding: var(--padding);
+    text-align: center;
+}
+
+.blog .headings::after {
+    margin: 20px auto;
+}
+
+.blog .row {
+    display: flex;
+}
+
+.blog .row .col {
+    flex: 1;
+    margin: 20px;
+}
+.blog img {
+    width: 100%;
+    height: auto;
+}
+
+.blog h3 {
+    font-size: 1.7rem;
+    padding: 20px 0;
+}
+
+.blog p {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.blog button {
+    background-color: var(--tamnoPlava);
+    color: var(--bela);
+}
+
+.blog button:hover {
+    background-color: var(--orange);
+    color: var(--tamnoPlava);
+}
+
+/**************
+Footer
+**************/
+
+footer {
+    background-image:linear-gradient(to right,rgba(253, 127, 69,.8),rgba(29, 82, 124,.8)),url(../img/baloon.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: var(--tamnoPlava);
+}
+
+footer a:hover {
+    color: var(--svetloPlava);
+    transition: var(--transition);
+}
+
+footer p {
+    color: var(--svetloSiva);
+    padding-top: 40px;
+}
+
+/**************
+***************
+Responsive
+***************
+**************/
+
+@media(max-width:768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav .logo {
+       font-size: 1.5rem;
+       padding-bottom: 20px;
+       padding-top: 20px;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    nav ul li a {
+        padding-left: 10px;
+    }
+     
+    header {
+        height: 70vh;
+        padding: 0 30px;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    
+    .about .col:first-child {
+        margin-bottom: 40px;
+    }
+    
+    .about p {
+        padding-right: 0px;
+    }
+
+    .services .container {
+        flex-direction: column;
+    }
+    
+    .services .col:first-child {
+        order: 2;
+    }
+    
+    .services .col:last-child {
+        order: 1;
+    }
+    
+    .blog .row {
+        flex-direction: column;
+    }
+    
+}
+
+
+
+
+
+
+
